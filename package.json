@@ -1,8 +1,8 @@
 {
   "name": "astro-monorepo",
   "workspaces": [
-	"apps/a",
-	"apps/b"
+	"apps/app-a",
+	"apps/app-b"
    ],
   "dependencies": {
     "astro": "5.14.7"
