@@ -138,4 +138,9 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
+# IDEs and editors
 .idea
+.vscode
+
+# Astro
+.astro
