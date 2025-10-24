@@ -16,9 +16,6 @@ jobs:
   build:
     name: "build"
     runs-on: "ubuntu-latest"
-    defaults:
-      run:
-        working-directory: ./apps/app-a
 
     steps:
       - uses: "actions/checkout@v4"
@@ -29,13 +26,12 @@ jobs:
           cache: "npm"
 
       - name: "Install dependencies"
-        working-directory: ./
         run: "npm ci"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.READER_TOKEN }}
 
       - name: "Build application"
-        run: "npm run build"
+        run: "npm run build --workspace=apps/app-a"
 
       - name: "Upload to cdn"
         uses: nais/deploy/actions/cdn-upload/v2@master
