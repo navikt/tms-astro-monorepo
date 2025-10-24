@@ -34,8 +34,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.READER_TOKEN }}
 
       - name: Debug
-        run: |
-          - ls
+        run: ls
 
       - name: "Build application"
         run: "npm run build"
