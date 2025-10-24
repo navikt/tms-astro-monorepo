@@ -34,14 +34,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.READER_TOKEN }}
 
-      - name: Debug
-        run: ls
-
       - name: "Build application"
         run: "npm run build"
-
-      - name: Debug
-        run: ls
 
       - name: "Upload to cdn"
         uses: nais/deploy/actions/cdn-upload/v2@master
