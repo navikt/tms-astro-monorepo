@@ -1,8 +1,9 @@
 FROM gcr.io/distroless/nodejs22-debian12
 
 WORKDIR /usr/src/app
-COPY ./dist ./dist
+
 COPY ./node_modules ./node_modules
+COPY ./apps/app-a/dist ./dist
 
 ENV HOST=0.0.0.0
 ENV PORT=3000
