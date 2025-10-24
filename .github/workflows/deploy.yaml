@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - "main"
+      - "test-run"
     paths:
       - "apps/app-a/**"
 
@@ -31,6 +32,10 @@ jobs:
         run: "npm ci"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.READER_TOKEN }}
+
+      - name: Debug
+        run: |
+          - ls
 
       - name: "Build application"
         run: "npm run build"
