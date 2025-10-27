@@ -1,7 +1,7 @@
 # tms-astro-monorepo
 
 ## Workflows
-Deploy trigges bla. paths i workflowene.
+Deploy trigges bla. av paths i workflowene.
 
 ### App-a
 ```
