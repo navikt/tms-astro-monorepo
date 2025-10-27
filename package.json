@@ -1,5 +1,6 @@
 {
   "name": "astro-monorepo",
+  "private": true,
   "workspaces": [
     "apps/app-a",
     "apps/app-b"
